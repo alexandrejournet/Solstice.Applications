@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>$(AssemblyName)</Title>
+    <Authors>Alexandre JOURNET</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Description>Starter pack for building .NET Core API With Clean code (Service Part)</Description>
+    <PackageTags>.NET Core; .NET; Clean; Clean code; Repository Pattern;</PackageTags>
+    <AssemblyVersion>$(AssemblyVersion)</AssemblyVersion>
+    <FileVersion>$(AssemblyFileVersion)</FileVersion>
+    <VersionPrefix>0.0.12</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>$(VersionPrefix)-$(VersionSuffix)</Version>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Radiant.NET.Domain\Radiant.NET.Domain.csproj" />
+    <ProjectReference Include="..\Radiant.NET.Repository\Radiant.NET.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
