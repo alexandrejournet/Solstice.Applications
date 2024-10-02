@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Radiant.NET.Domain.Exceptions;
-using Radiant.NET.Service.Attributes;
+using Radiant.Domain.Exceptions;
+using Radiant.Service.Attributes;
 using System.Reflection;
 
-namespace Radiant.NET.Service.Injections
+namespace Radiant.Service.Injections
 {
     /// <summary>
     /// A static helper class for service injections.

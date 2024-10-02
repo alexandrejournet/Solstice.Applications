@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
-using Radiant.NET.Domain.Models;
-using Radiant.NET.Repository;
-using Radiant.NET.Repository.Core;
-using Radiant.NET.Repository.Specifications;
+using Radiant.Domain.Models;
+using Radiant.Repository;
+using Radiant.Repository.Core;
+using Radiant.Repository.Specifications;
 using System.Data.Common;
 using System.Linq.Expressions;
 
-namespace Radiant.NET.Service.Base;
+namespace Radiant.Service.Base;
 
 /// <summary>
 /// Abstract class 'CoreService' defines the operations for managing entities of type T in the database.
@@ -28,7 +28,7 @@ public class CoreService<TRepository, T> : ICoreService<T>
     protected readonly TRepository _repository;
 
     /// <summary>
-    /// Constructor for the Radiant.NET service.
+    /// Constructor for the Radiant service.
     /// </summary>
     /// <param name="repository">An instance of a repository derived from <see cref="ICoreRepository{T}"/>.</param>
     protected CoreService(IUnitOfWork unitOfWork)

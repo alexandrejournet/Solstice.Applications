@@ -1,3 +1,3 @@
-# Radiant.NET.Service
+# Radiant.Service
 
-Partie Service de Radiant.NET Framework
+Partie Service de Radiant Framework
