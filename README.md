@@ -1,3 +1,3 @@
-# Radiant.Service
+# Solstice.Service
 
 Partie Service de Radiant Framework

@@ -1,7 +1,7 @@
-﻿namespace Radiant.Service.Attributes
+﻿namespace Solstice.Service.Attributes
 {
     /// <summary>
-    /// The ServiceAttribute is a custom attribute used for marking classes within the Radiant.Service namespace.
+    /// The ServiceAttribute is a custom attribute used for marking classes within the Solstice.Service namespace.
     /// This attribute is sealed, implying that it cannot be inherited from.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]

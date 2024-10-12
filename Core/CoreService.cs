@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
-using Radiant.Domain.Models;
-using Radiant.Repository;
-using Radiant.Repository.Core;
-using Radiant.Repository.Specifications;
+using Solstice.Domain.Models;
+using Solstice.Repository;
+using Solstice.Repository.Core;
+using Solstice.Repository.Specifications;
 using System.Data.Common;
 using System.Linq.Expressions;
 
-namespace Radiant.Service.Base;
+namespace Solstice.Service.Base;
 
 /// <summary>
 /// Abstract class 'CoreService' defines the operations for managing entities of type T in the database.

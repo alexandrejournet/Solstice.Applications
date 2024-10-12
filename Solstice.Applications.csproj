@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Radiant.Domain\Radiant.Domain.csproj" />
-    <ProjectReference Include="..\Radiant.Repository\Radiant.Repository.csproj" />
+    <ProjectReference Include="..\Solstice.Domain\Solstice.Domain.csproj" />
+    <ProjectReference Include="..\Solstice.Repository\Solstice.Repository.csproj" />
   </ItemGroup>
 
   <ItemGroup>

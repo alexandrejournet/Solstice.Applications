@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Radiant.Domain.Exceptions;
-using Radiant.Service.Attributes;
+using Solstice.Domain.Exceptions;
+using Solstice.Service.Attributes;
 using System.Reflection;
 
-namespace Radiant.Service.Injections
+namespace Solstice.Service.Injections
 {
     /// <summary>
     /// A static helper class for service injections.
