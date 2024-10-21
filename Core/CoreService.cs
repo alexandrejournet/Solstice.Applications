@@ -1,12 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using Solstice.Domain.Models;
-using Solstice.Repository;
-using Solstice.Repository.Core;
-using Solstice.Repository.Specifications;
-using System.Data.Common;
+﻿using System.Data.Common;
 using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore.Storage;
+using Solstice.Domain.Models;
+using Solstice.Infrastructure;
+using Solstice.Infrastructure.Core;
+using Solstice.Infrastructure.Specifications;
+using Solstice.Infrastructure.UnitOfWorks;
 
-namespace Solstice.Service.Base;
+namespace Solstice.Applications.Core;
 
 /// <summary>
 /// Abstract class 'CoreService' defines the operations for managing entities of type T in the database.

@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using Solstice.Domain.Models;
-using Solstice.Repository.Specifications;
-using System.Data.Common;
+﻿using System.Data.Common;
 using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore.Storage;
+using Solstice.Domain.Models;
+using Solstice.Infrastructure.Specifications;
 
-namespace Solstice.Service.Base;
+namespace Solstice.Applications.Core;
 
 /// <summary>
 /// This interface describes an abstraction for a data manipulation service on a given type of RadiantModel.
