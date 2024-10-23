@@ -51,9 +51,27 @@ public static class ServiceInjections
             throw CoreException.Format(CoreExceptionEnum.NO_SERVICE);
         }
 
-        foreach (var type in types)
+        foreach (var implementationType in types)
         {
-            services.AddScoped(type);
+            // Get all interfaces for the type
+            var interfaceTypes = implementationType.GetInterfaces()
+                // On filtre pour n'inclure que celles qui ont l'attribut ServiceInterface
+                .Where(i => i.GetCustomAttributes(typeof(ServiceInterfaceAttribute), true).Length > 0)
+                .ToArray();
+
+            if (interfaceTypes.Length == 0)
+            {
+                // If no custom interface, we can add directly the implementation
+                services.AddScoped(implementationType);
+            }
+            else
+            {
+                // For each interface
+                foreach (var interfaceType in interfaceTypes)
+                {
+                    services.AddScoped(interfaceType, implementationType);
+                }
+            }
         }
     }
 
