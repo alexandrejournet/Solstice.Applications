@@ -94,17 +94,17 @@ public class CoreService<TRepository, T> : ICoreService<T>
     /// <returns>Bool value indicating whether any entities meet the specified condition.</returns>
     public async Task<bool> AnyAsyncBy(Expression<Func<T, bool>> where)
     {
-        return await _repository.AnyAsyncBy(where);
+        return await _repository.AnyAsync(where);
     }
 
     public async Task<bool> AnyAsyncBy<TEntity>(Expression<Func<TEntity, bool>> where) where TEntity : class
     {
-        return await _repository.AnyAsyncBy(where);
+        return await _repository.AnyAsync(where);
     }
 
     public async Task<bool> AnyAsyncBy<TEntity>(IQueryable<TEntity> queryable) where TEntity : class
     {
-        return await _repository.AnyAsyncBy(queryable);
+        return await _repository.AnyAsync(queryable);
     }
 
     /// <summary>
@@ -122,7 +122,7 @@ public class CoreService<TRepository, T> : ICoreService<T>
     /// <returns>Task with the total count of entities available.</returns>
     public async Task<decimal> CountAllAsync()
     {
-        return await _repository.CountAllAsync();
+        return await _repository.CountAsync();
     }
 
     /// <summary>
@@ -132,12 +132,12 @@ public class CoreService<TRepository, T> : ICoreService<T>
     /// <returns>Task with the total count of entities that meet the specified condition.</returns>
     public async Task<decimal> CountAllAsyncBy(Expression<Func<T, bool>> where)
     {
-        return await _repository.CountAllAsyncBy(where);
+        return await _repository.CountAsync(where);
     }
 
     public async Task<decimal> CountAllAsyncBy<TEntity>(Expression<Func<TEntity, bool>> where) where TEntity : class
     {
-        return await _repository.CountAllAsyncBy(where);
+        return await _repository.CountAsync(where);
     }
 
     public async Task<T> FindAsync(int id)
@@ -439,7 +439,7 @@ public class CoreService<TRepository, T> : ICoreService<T>
     /// <returns>Awaitable task.</returns>
     public async Task SaveAsync()
     {
-        await _repository.SaveAsync();
+        await _repository.SaveChangesAsync();
     }
 
     /// <summary>
