@@ -46,7 +46,7 @@ public static class ServiceInjections
             select type;
 
         var types = typesWithMyAttribute.ToList();
-        if (!types.Any())
+        if (types.Count == 0)
         {
             throw CoreException.Format(CoreExceptionEnum.NO_SERVICE);
         }
