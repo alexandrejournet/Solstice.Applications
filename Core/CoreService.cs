@@ -29,7 +29,7 @@ public class CoreService<TRepository, T> : ICoreService<T>
     protected readonly TRepository _repository;
 
     /// <summary>
-    /// Constructor for the Radiant service.
+    /// Constructor for the Solstice service.
     /// </summary>
     /// <param name="repository">An instance of a repository derived from <see cref="ICoreRepository{T}"/>.</param>
     protected CoreService(IUnitOfWork unitOfWork)
